@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8ab433fe.css",
+    "main.js": "/static/js/main.e1352d97.js",
+    "static/js/453.419a5d54.chunk.js": "/static/js/453.419a5d54.chunk.js",
+    "static/media/Banner-img.png": "/static/media/Banner-img.de50d2d5d7f93dd26f18.png",
+    "static/media/logo2.png": "/static/media/logo2.0b144c7d393329b253b9.png",
+    "static/media/logo4.png": "/static/media/logo4.b3fb52f6f0ccbd8c3360.png",
+    "static/media/Banner-2.jpeg": "/static/media/Banner-2.4d3e1b9bffbee1122024.jpeg",
+    "static/media/toastmasters-logo.png": "/static/media/toastmasters-logo.4a469f1cd93bd1b5ebad.png",
+    "index.html": "/index.html",
+    "main.8ab433fe.css.map": "/static/css/main.8ab433fe.css.map",
+    "main.e1352d97.js.map": "/static/js/main.e1352d97.js.map",
+    "453.419a5d54.chunk.js.map": "/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ab433fe.css",
+    "static/js/main.e1352d97.js"
+  ]
+}

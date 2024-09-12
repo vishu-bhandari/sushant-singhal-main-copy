@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.border-gradient {
+  border-image: linear-gradient(to right, #0a192f, #f97316, #54d6bb);
+  border-image-slice: 1;
+  border-radius: 10px !important;
+}
+.gradient-border-top {
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, #0a192f81, #f97416d7, #54d6bb) 1;
+
+  border-image-slice: 1;
+}
+
+/* input */
+
+input,
+textarea {
+  height: 40px;
+  border: 1px solid gray;
+  width: 100%;
+  padding-left: 20px;
+}
+input:focus {
+  outline: none;
+  border: 2px solid black;
+}
+textarea {
+  height: 100px;
+}
+
