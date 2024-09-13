@@ -4,7 +4,7 @@ import axios from "axios";
 import { message } from "antd";
 import { useNavigate } from "react-router-dom";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8000";
+
 
 function Login() {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ function Login() {
   const login = async () => {
     setLoading(true);
     try {
-      const res = await axios.post(`${BASE_URL}/api/portfolio/AdminLogin`, user);
+      const res = await axios.post(`http://localhost:8000/api/portfolio/AdminLogin`, user);
 
       if (res.data.success) {
         message.success(res.data.message);

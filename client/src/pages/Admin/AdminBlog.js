@@ -6,7 +6,7 @@ import axios from "axios";
 import { TextInput, Textarea } from "flowbite-react";
 
 // Ensure BASE_URL is defined correctly in your environment
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8000";
+
 
 const AdminBlog = () => {
   const dispatch = useDispatch();
@@ -21,8 +21,8 @@ const AdminBlog = () => {
     try {
       dispatch(ShowLoading());
       const url = selectedItemForEdit
-        ? `${BASE_URL}/api/portfolio/update-blog`
-        : `${BASE_URL}/api/portfolio/add-blog`;
+        ? `http://localhost:8000/api/portfolio/update-blog`
+        : `http://localhost:8000/api/portfolio/add-blog`;
       const response = await axios.post(url, {
         ...values,
         _id: selectedItemForEdit?._id,
@@ -46,7 +46,7 @@ const AdminBlog = () => {
   const onDelete = async (item) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.post(`${BASE_URL}/api/portfolio/delete-blog`, {
+      const response = await axios.post(`http://localhost:8000/api/portfolio/delete-blog`, {
         _id: item._id,
       });
 

@@ -6,7 +6,7 @@ import axios from "axios";
 import { message } from "antd";
 import { TextInput, Textarea } from "flowbite-react";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8000";
+
 
 
 
@@ -19,7 +19,7 @@ function AdminAbout() {
     try {
       dispatch(ShowLoading());
       const response = await axios.post(
-        `${BASE_URL}/api/portfolio/update-about`,  // Using BASE_URL environment variable
+        `http://localhost:8000/api/portfolio/update-about`,  // Using BASE_URL environment variable
         {
           ...values,
           _id: portfolioData.about._id,

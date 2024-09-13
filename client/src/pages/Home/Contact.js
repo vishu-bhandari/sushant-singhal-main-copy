@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import image4 from "../../images/Banner-2.jpeg";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8000";
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -28,7 +28,7 @@ function Contact() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${BASE_URL}/api/portfolio/add-contact`,
+        `http://localhost:8000/api/portfolio/add-contact`,
         formData
       );
       setSuccess(response.data.message);

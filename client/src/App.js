@@ -18,7 +18,7 @@ import ScrollToTop from "./Components/ScrollToTop";
 import Login from "./pages/Admin/Login";
 import WhatsApp from "./Components/WhatsApp";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL ;
+// const BASE_URL = process.env.REACT_APP_BASE_URL ;
 
 
 function App() {
@@ -27,8 +27,8 @@ function App() {
 
   const getPortfolioData = useCallback(async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/api/portfolio/get-portfolio-data`);
-      // const response=await axios.get('http://localhost:8000/api/portfolio/get-portfolio-data')
+      // const response = await axios.get(`${BASE_URL}/api/portfolio/get-portfolio-data`);
+      const response=await axios.get('http://localhost:8000/api/portfolio/get-portfolio-data')
       dispatch(SetPortfolioData(response.data));
     } catch (error) {
       

@@ -9,7 +9,7 @@ import image4 from "../../images/Banner-2.jpeg";
 import ScrollToTopButton from "./ScrollToTopButton";
 
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8000";
+
 
 function ContactPage() {
   const [formData, setFormData] = useState({
@@ -35,7 +35,7 @@ function ContactPage() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${BASE_URL}/api/portfolio/add-contact`,
+        `http://localhost:8000/api/portfolio/add-contact`,
         formData
       );
       setSuccess(response.data.message);

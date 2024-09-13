@@ -5,7 +5,7 @@ import axios from "axios";
 import { message } from "antd";
 import { Table, TableCell, TableHead, TableHeadCell, TableRow, Textarea, Button } from "flowbite-react";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8000";
+
 
 function AdminContact() {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ function AdminContact() {
     const fetchContacts = async () => {
       try {
         dispatch(ShowLoading());
-        const response = await axios.get(`${BASE_URL}/api/portfolio/get-contacts`);
+        const response = await axios.get(`http://localhost:8000/api/portfolio/get-contacts`);
         setContacts(response.data.data);
         dispatch(HideLoading());
       } catch (error) {
@@ -30,7 +30,7 @@ function AdminContact() {
   const handleDelete = async (id) => {
     try {
       dispatch(ShowLoading());
-      await axios.post(`${BASE_URL}/api/portfolio/delete-contact`, { _id: id });
+      await axios.post(`http://localhost:8000/api/portfolio/delete-contact`, { _id: id });
       setContacts(contacts.filter(contact => contact._id !== id));
       dispatch(HideLoading());
       message.success('Contact deleted successfully');
