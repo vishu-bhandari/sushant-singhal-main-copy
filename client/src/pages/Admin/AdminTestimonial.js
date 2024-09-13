@@ -5,7 +5,7 @@ import { HideLoading, ReloadData, ShowLoading } from "../../redux/rootSlice";
 import axios from "axios";
 import TextArea from "antd/es/input/TextArea";
 
-
+const BASE_URL = process.env.REACT_APP_BASE_URL ;
 
 function AdminTestimonial() {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ function AdminTestimonial() {
       let response;
       if (selectedItemForEdit) {
         response = await axios.post(
-          `http://localhost:8000/api/portfolio/update-testimonial`,
+          `${BASE_URL}/api/portfolio/update-testimonial`,
           {
             ...values,
             _id: selectedItemForEdit._id,
@@ -29,7 +29,7 @@ function AdminTestimonial() {
         );
       } else {
         response = await axios.post(
-          `http://localhost:8000/api/portfolio/add-testimonial`,
+          `${BASE_URL}/api/portfolio/add-testimonial`,
           values
         );
       }
@@ -52,7 +52,7 @@ function AdminTestimonial() {
     try {
       dispatch(ShowLoading());
       const response = await axios.post(
-        `http://localhost:8000/api/portfolio/delete-testimonial`,
+        `${BASE_URL}/api/portfolio/delete-testimonial`,
         {
           _id: item._id,
         }

@@ -5,7 +5,7 @@ import { HideLoading, ReloadData, ShowLoading } from "../../redux/rootSlice";
 import axios from "axios";
 import TextArea from "antd/es/input/TextArea";
 
-
+const BASE_URL = process.env.REACT_APP_BASE_URL ;
 
 function AdminFaq() {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ function AdminFaq() {
       let response;
       if (selectedItemForEdit) {
         response = await axios.post(
-          `http://localhost:8000/api/portfolio/update-faq`,
+          `${BASE_URL}/api/portfolio/update-faq`,
           {
             ...values,
             _id: selectedItemForEdit._id,
@@ -29,7 +29,7 @@ function AdminFaq() {
         );
       } else {
         response = await axios.post(
-          `http://localhost:8000/api/portfolio/add-faq`,
+          `${BASE_URL}/api/portfolio/add-faq`,
           values
         );
       }
@@ -52,7 +52,7 @@ function AdminFaq() {
     try {
       dispatch(ShowLoading());
       const response = await axios.post(
-        `http://localhost:8000/api/portfolio/delete-faq`,
+        `${BASE_URL}/api/portfolio/delete-faq`,
         {
           _id: item._id,
         }

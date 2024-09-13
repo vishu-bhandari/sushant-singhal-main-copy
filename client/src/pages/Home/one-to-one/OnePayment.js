@@ -1,4 +1,4 @@
-
+const BASE_URL = process.env.REACT_APP_BASE_URL ;
 const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
 
 const paymentHandler = async (amount) => {
@@ -6,7 +6,7 @@ const paymentHandler = async (amount) => {
   const receiptId = '1234567890';
   
   try {
-    const response = await fetch(`http://localhost:8000/order`, {
+    const response = await fetch(`${BASE_URL}/order`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const paymentHandler = async (amount) => {
         const body = { ...response };
 
         try {
-          const validateResponse = await fetch(`http://localhost:8000/validate`, {
+          const validateResponse = await fetch(`${BASE_URL}/validate`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

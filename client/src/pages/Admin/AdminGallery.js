@@ -5,7 +5,7 @@ import { HideLoading, ReloadData, ShowLoading } from "../../redux/rootSlice";
 import axios from "axios";
 import TextArea from "antd/es/input/TextArea";
 
-
+const BASE_URL = process.env.REACT_APP_BASE_URL ;
 
 function AdminGallery() {
   const dispatch = useDispatch();
@@ -20,12 +20,12 @@ function AdminGallery() {
       dispatch(ShowLoading());
       let response;
       if (selectedItemForEdit) {
-        response = await axios.post(`http://localhost:8000/api/portfolio/update-gallery`, {
+        response = await axios.post(`${BASE_URL}/api/portfolio/update-gallery`, {
           ...values,
           _id: selectedItemForEdit._id,
         });
       } else {
-        response = await axios.post(`http://localhost:8000/api/portfolio/add-gallery`, values);
+        response = await axios.post(`${BASE_URL}/api/portfolio/add-gallery`, values);
       }
       dispatch(HideLoading());
       if (response.data.success) {
@@ -45,7 +45,7 @@ function AdminGallery() {
   const onDelete = async (item) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.post(`http://localhost:8000/api/portfolio/delete-gallery`, {
+      const response = await axios.post(`${BASE_URL}/api/portfolio/delete-gallery`, {
         _id: item._id,
       });
       dispatch(HideLoading());

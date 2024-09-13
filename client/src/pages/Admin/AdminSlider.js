@@ -4,7 +4,7 @@ import { Modal, Form, message } from "antd";
 import { HideLoading, ReloadData, ShowLoading } from "../../redux/rootSlice";
 import axios from "axios";
 
-
+const BASE_URL = process.env.REACT_APP_BASE_URL ;
 
 function AdminSlider() {
   const dispatch = useDispatch();
@@ -19,12 +19,12 @@ function AdminSlider() {
       dispatch(ShowLoading());
       let response;
       if (selectedItemForEdit) {
-        response = await axios.post(`http://localhost:8000/api/portfolio/update-slider`, {
+        response = await axios.post(`${BASE_URL}/api/portfolio/update-slider`, {
           ...values,
           _id: selectedItemForEdit._id,
         });
       } else {
-        response = await axios.post(`http://localhost:8000/api/portfolio/add-slider`, values);
+        response = await axios.post(`${BASE_URL}/api/portfolio/add-slider`, values);
       }
       dispatch(HideLoading());
       if (response.data.success) {
@@ -44,7 +44,7 @@ function AdminSlider() {
   const onDelete = async (item) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.post(`http://localhost:8000/api/portfolio/delete-slider`, {
+      const response = await axios.post(`${BASE_URL}/api/portfolio/delete-slider`, {
         _id: item._id,
       });
       dispatch(HideLoading());

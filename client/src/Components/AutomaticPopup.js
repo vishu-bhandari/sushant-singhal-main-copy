@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+const BASE_URL = process.env.REACT_APP_BASE_URL ;
 
 
 
@@ -37,7 +37,7 @@ function AutomaticPopup() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/portfolio/add-contact`,
+        `${BASE_URL}/api/portfolio/add-contact`,
         formData
       );
       setSuccess(response.data.message);
