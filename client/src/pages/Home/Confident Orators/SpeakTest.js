@@ -1,48 +1,77 @@
 import React from "react";
 
-
 function SpeakTest() {
- 
-
   const features = [
     {
-      title: 'Transformative Mindset Shift',
-      description: 'Overcome doubts and fears to become a powerful, confident speaker.',
+      title: "Transformative Mindset Shift",
+      description:
+        "Overcome doubts and fears to become a powerful, confident speaker.",
     },
     {
-      title: 'Practice-Based Experiential Learning',
-      description: 'Individual attention to all participants and making them practice in each session!',
+      title: "Practice-Based Experiential Learning",
+      description:
+        "Individual attention to all participants and making them practice in each session!",
     },
     {
-      title: 'Interacting & Brainstorming Together',
-      description: 'Brainstorm on speeches and practical activities for real-world insight.',
+      title: "Interacting & Brainstorming Together",
+      description:
+        "Brainstorm on speeches and practical activities for real-world insight.",
     },
     {
-      title: 'Proven Frameworks',
-      description: 'Easy-to-follow frameworks to conquer nervousness and structure any speech.',
+      title: "Proven Frameworks",
+      description:
+        "Easy-to-follow frameworks to conquer nervousness and structure any speech.",
     },
     {
-      title: 'Expert Guidance',
-      description: 'Learn from Coach Sushant Singhal’s 6+ years of experience in mentoring 500+ participants.',
+      title: "Expert Guidance",
+      description:
+        "Learn from Coach Sushant Singhal’s 6+ years of experience in mentoring 500+ participants.",
     },
     {
-      title: 'Fun Activities & Games',
-      description: 'Fun while learning is our motto! Join us for intriguing fun activities throughout.',
+      title: "Fun Activities & Games",
+      description:
+        "Fun while learning is our motto! Join us for intriguing fun activities throughout.",
     },
     {
-      title: 'Comprehensive Curriculum',
-      description: 'Master vocal techniques, body language, speech structuring, and storytelling.',
+      title: "Comprehensive Curriculum",
+      description:
+        "Master vocal techniques, body language, speech structuring, and storytelling.",
     },
     {
-      title: 'Tailored Feedback and Support',
-      description: 'Get personalized feedback to enhance your skills and address individual needs.',
-    }
+      title: "Tailored Feedback and Support",
+      description:
+        "Get personalized feedback to enhance your skills and address individual needs.",
+    },
   ];
   return (
     <>
       <section className="relative isolate overflow-hidden px-6 lg:overflow-visible lg:px-0 max-w-7xl m-auto ">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 lg:px-8  lg:max-w-7xl">
-          <div className="rounded-lg overflow-hidden mt-10 relative before:absolute before:z-20 before:bg-black before:h-full before:w-full before:bg-gradient-to-tr before:from-black before:to-teal-600 before:opacity-70">
+         
+
+          <div className="sm:max-w-4xl lg:max-w-7xl mx-auto ">
+            <div className="text-center">
+              <h2 className="font-semibold text-3xl">Features you'll love</h2>
+              <p className="max-w-md mx-auto mt-2 text-gray-500">
+                Why Choose Our Course?
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-10 mt-10">
+              {features.map((feature, index) => (
+                <div key={index} className="flex gap-4 items-start">
+                  <span className="text-orange-600 bg-orange-500/100 p-3 rounded-full">
+                    <span className="w-5 h-5 bg-gray-200 rounded-full"></span>
+                  </span>
+                  <div>
+                    <h3 className="font-semibold text-xl">{feature.title}</h3>
+                    <p className="mt-1 text-gray-500">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-lg overflow-hidden mt-10 relative before:absolute before:z-20 before:bg-black before:h-full before:w-full before:bg-gradient-to-tr before:from-black before:to-yellow-800 before:opacity-70">
             <iframe
               src="https://www.youtube.com/embed/q4Z1KglFh78?si=WVgzBzjekAcr2PJ1"
               className="absolute z-10 object-cover w-full h-full"
@@ -80,7 +109,9 @@ function SpeakTest() {
               <h2 className="text-white sm:text-3xl  text-xl font-semibold  sm:opacity-100">
                 Elevate Your Public Speaking Skills
               </h2>
-              <h3 className="text-white sm:text-xl text-lg opacity-70 sm:opacity-100 ">Coach Sushant Singhal</h3>
+              <h3 className="text-white sm:text-xl text-lg opacity-70 sm:opacity-100 ">
+                Coach Sushant Singhal
+              </h3>
               <p className="text-sm text-slate-200 mt-4 opacity-70 sm:opacity-100">
                 Join our transformative public speaking course designed to help
                 you overcome stage fright, enhance your delivery, and captivate
@@ -149,78 +180,94 @@ function SpeakTest() {
             </div>
           </div>
 
-
-          <div className="sm:max-w-4xl lg:max-w-7xl mx-auto ">
-      <div className="text-center">
-        <h2 className="font-semibold text-3xl">Features you'll love</h2>
-        <p className="max-w-md mx-auto mt-2 text-gray-500">
-        Why Choose Our Course?
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-10 mt-10">
-        {features.map((feature, index) => (
-          <div key={index} className="flex gap-4 items-start">
-            <span className="text-teal-600 bg-teal-500/100 p-3 rounded-full">
-            
-              <span className="w-5 h-5 bg-gray-200 rounded-full"></span>
-            </span>
-            <div>
-              <h3 className="font-semibold text-xl">{feature.title}</h3>
-              <p className="mt-1 text-gray-500">{feature.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-
-          {/* <div className=" dark:bg-white-800  py-6 sm:py-8 lg:py-12">
-          <div className="mx-auto max-w-screen-2xl ">
-            <div className="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-              <div className="flex items-center gap-12">
-                <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl dark:text-primary">
-                  Testimonials
-                </h2>
-
-                <p className="hidden max-w-screen-sm text-primary dark:text-primary md:block">
-                  What People are Saying
-                </p>
-              </div>
-
-              <a
-                href="#"
-                className="inline-block rounded-lg border bg-white dark:bg-gray-700 dark:border-none px-4 py-2 text-center text-sm font-semibold text-gray-500 dark:text-gray-200 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base"
-              >
-                More
-              </a>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-              {images.map((image, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className={`group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-${
-                    image.colSpan || 1
-                  } md:h-80`}
-                >
-                  <iframe
-                    src={image.imageUrl}
-                    loading="lazy"
-                    alt={image.alt}
-                    className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                  />
-
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-                  <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-                    {image.category}
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div> */}
+          <div className="container mx-auto  md:py-8 py-4">
+             
+             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+               {/* Large item */}
+               <div className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
+                 <img
+                   src="https://i.postimg.cc/cHJyvJsh/temp-Imagexge674.avif"
+                   alt="Nature"
+                   className="w-full h-full object-cover"
+                   loading="lazy"
+                 />
+                 <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="absolute bottom-0 left-0 right-0 p-4">
+                     <h3 className="text-2xl font-bold text-white">
+                     Confident Orators
+                     </h3>
+                     <p className="text-white">
+                       Excel your oration with our group coaching
+                     </p>
+                   </div>
+                 </div>
+               </div>
+           
+               {/* Two small items */}
+               <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+                 <img
+                   src="https://i.postimg.cc/kgfdq8CG/temp-Image-Ay-HEHa.avif"
+                   alt="Food"
+                   className="w-full h-48 object-contain"
+                   loading="lazy"
+                 />
+                 <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="absolute bottom-0 left-0 right-0 p-4">
+                     <h4 className="text-xl font-bold text-white">
+                     Confident Orators
+                     </h4>
+                   </div>
+                 </div>
+               </div>
+               <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+                 <img
+                   src="https://i.postimg.cc/kMp9tWRb/temp-Imagen-STjvk.avif"
+                   alt="Technology"
+                   className="w-full h-48 object-contain"
+                   loading="lazy"
+                 />
+                 <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="absolute bottom-0 left-0 right-0 p-4">
+                     <h4 className="text-xl font-bold text-white">
+                     Confident Orators
+                     </h4>
+                   </div>
+                 </div>
+               </div>
+           
+               {/* Three medium items */}
+               <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+                 <img
+                   src="https://i.postimg.cc/prggcYKc/temp-Imageen-B9-Ok.avif"
+                   alt="Travel"
+                   className="w-full h-48 object-contain"
+                   loading="lazy"
+                 />
+                 <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="absolute bottom-0 left-0 right-0 p-4">
+                     <h4 className="text-xl font-bold text-white">
+                     Confident Orators
+                     </h4>
+                   </div>
+                 </div>
+               </div>
+               <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+                 <img
+                   src="https://i.postimg.cc/HWqYhQWC/temp-Imagevgt-TNQ.avif"
+                   alt="Art"
+                   className="w-full h-48 object-contain"
+                   loading="lazy"
+                 />
+                 <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="absolute bottom-0 left-0 right-0 p-4">
+                     <h4 className="text-xl font-bold text-white">
+                     Confident Orators
+                     </h4>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
         </div>
       </section>
     </>

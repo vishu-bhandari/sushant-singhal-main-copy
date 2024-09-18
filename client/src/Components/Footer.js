@@ -69,13 +69,11 @@ function Footer() {
                   ></rect>
                 </svg>
                 <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                  
-                    <span className="sm:text-2xl  text-xl ">S</span>ushant{" "}
-                    <span className="sm:text-2xl text-xl ">S</span>inghal
-                    <hr className="border w-1/3 border-secondary opacity" />
-                    <hr className="border w-1/4 border-tertiary opacity mt-0.5" />
-                    <hr className="border w-1/5 border-primary opacity mt-0.5" />
-                 
+                  <span className="sm:text-2xl  text-xl ">S</span>ushant{" "}
+                  <span className="sm:text-2xl text-xl ">S</span>inghal
+                  <hr className="border w-1/3 border-secondary opacity" />
+                  <hr className="border w-1/4 border-tertiary opacity mt-0.5" />
+                  <hr className="border w-1/5 border-primary opacity mt-0.5" />
                 </span>
               </a>
               <div className="mt-6 lg:max-w-sm">
@@ -95,14 +93,25 @@ function Footer() {
               </p>
               <div className="flex">
                 <p className="mr-1 text-gray-800">Phone:</p>
-                <a
-                  href="tel:850-123-5021"
-                  aria-label="Our phone"
-                  title="Our phone"
-                  className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                >
-                  850-123-5021
-                </a>
+                <div className="">
+                  <a
+                    href="tel:9910654407"
+                    aria-label="Our phone"
+                    title="Our phone"
+                    className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                  >
+                    9910654407 &nbsp;
+                  </a>
+
+                  <a
+                    href="tel:9266046791"
+                    aria-label="Our phone"
+                    title="Our phone"
+                    className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                  >
+                    9266046791
+                  </a>
+                </div>
               </div>
               <div className="flex">
                 <p className="mr-1 text-gray-800">Email:</p>
@@ -117,16 +126,12 @@ function Footer() {
               </div>
               <div className=" ">
                 <p className="mr-1 text-gray-800 font-bold">Quick Links</p>
-               
+
                 <div className="flex flex-col  mt-2">
-
-                <Link to='/contact'>Contact Us</Link>
-                <Link to='/service'>Services</Link>
-                <Link to='/gallary'>Gallery</Link>
-               
+                  <Link to="/contact">Contact Us</Link>
+                  <Link to="/service">Services</Link>
+                  <Link to="/gallary">Gallery</Link>
                 </div>
-
-               
               </div>
             </div>
             <div>
@@ -143,7 +148,7 @@ function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="/"
+                  href="https://www.linkedin.com/in/sushant-singhal-3355a1134/?originalSubdomain=in"
                   className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
@@ -152,7 +157,7 @@ function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="/"
+                  href="https://www.facebook.com/p/Sushant-Talks-100064134663217/"
                   className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -172,15 +177,12 @@ function Footer() {
             </p>
             <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
               <li>
-              
-               
                 <Link
                   to="/AdminLogin"
                   className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   Log in
                 </Link>
-             
               </li>
               <li>
                 <a

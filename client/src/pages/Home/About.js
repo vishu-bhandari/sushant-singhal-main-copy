@@ -209,7 +209,7 @@ function About() {
                   href="https://www.youtube.com/embed/nGW9W-rWhjg?si=-ouIAd9RD_krz4XD"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute z-20 top-1/2 md:right-20 right-28 text-white -translate-y-1/2 animate-glow"
+                  className="absolute z-50 top-1/2 md:right-20 right-28 text-white -translate-y-1/2 animate-glow"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

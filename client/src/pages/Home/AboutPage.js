@@ -47,11 +47,11 @@ function AboutPage() {
                     {content}
                   </p>
                 </div>
-                <div className="lg:w-1/2 w-full flex justify-center lg:justify-end  lg:mt-0">
+                <div className="lg:w-1/2 w-full flex justify-center lg:justify-end  lg:mt-0  ">
                   <img
                     src={image}
                     alt="about"
-                    className="rounded w-[100%] lg:w-[100%] md:-top-8 top-0 relative m-auto"
+                    className="rounded w-[60%] lg:w-[60%] md:-top-8 top-0 relative m-auto  "
                   />
                 </div>
               </div>

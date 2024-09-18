@@ -53,7 +53,7 @@ function Products() {
               Session Highlights
               </h2>
               <p className="mt-4 text-gray-500">
-                Content structuring | Mastering Modulation The art of persuasion
+                Content structuring | Mastering Modulation | The art of persuasion
                 | Connect with story telling | Acing impromptu speaking | Winning
                 Any Negotiation | Acing Any Interview Winning critical
                 conversations
