@@ -7,6 +7,9 @@ const path = require("path");
 
 const app = express();
 
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Use CORS middleware
 app.use(
   cors({
