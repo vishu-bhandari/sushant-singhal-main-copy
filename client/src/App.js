@@ -17,6 +17,7 @@ import PaymentPage from "./Components/PaymentPage";
 import ScrollToTop from "./Components/ScrollToTop";
 import Login from "./pages/Admin/Login";
 import WhatsApp from "./Components/WhatsApp";
+import LegalTerms from "./pages/Home/TermsAndConditions/LegalTerms";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL ;
 
@@ -58,6 +59,7 @@ function App() {
           <Route path="/confident-orators" element={<Speaktosucceed />} />
           <Route path="/Eloquence" element={<Eloquence />} />
           <Route path="/PaymentPage" element={<PaymentPage />} />
+          <Route path="/LegalTerms" element={<LegalTerms/>}/>
         </Routes>
       </BrowserRouter>
     </>

@@ -52,6 +52,7 @@ function GallaryPage() {
                   src={image.src}
                   alt="gallery img"
                   className="w-full h-80 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+                  loading="lazy"
                 />
                 {hoveredIndex === index && (
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">

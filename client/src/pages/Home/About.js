@@ -42,7 +42,7 @@ function About() {
             </div>
           </div>
           <div className="lg:-ml-12 lg:-mt-12 lg:p-12 p-0 -ml-0 -mt-0 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-            <img src={BannerImage} alt="" className="rounded-xl " />
+            <img src={BannerImage} alt="" className="rounded-xl "  />
           </div>
           <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div className="lg:pr-4">

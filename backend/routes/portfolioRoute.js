@@ -1,42 +1,70 @@
-const router=require('express').Router();
-
-
-const { About , Project , Slider, Blog, Gallery, Faq ,Testimonial,Aboutme , Contact} = require("../models/portfolioModel");
+const router = require('express').Router();
+const { 
+  About, 
+  Project, 
+  Slider, 
+  Blog, 
+  Gallery, 
+  Faq, 
+  Testimonial, 
+  Aboutme, 
+  Contact, 
+  PrivacyPolicy // Import the PrivacyPolicy model
+} = require("../models/portfolioModel");
 const { User } = require("../models/userModel");
 
-
-
-//get all portfolio data
+// Get all portfolio data
 router.get("/get-portfolio-data", async (req, res) => {
-    try {
-      
-      const abouts = await About.find();
-      const projects=await Project.find();
-      const sliders=await Slider.find();
-      const blogs=await Blog.find();
-      const gallerys=await Gallery.find();
-      const faqs=await Faq.find();
-      const testimonials=await Testimonial.find();
-      const aboutmes=await Aboutme.find();
-      
-      res.status(200).send({
-        
-        about: abouts[0],
-        projects:projects,
-        slider:sliders,
-        blog:blogs,
-        gallery:gallerys,
-        faq:faqs,
-        testimonial:testimonials,
-        aboutme:aboutmes[0],
-       
-      });
-    } catch (error) {
-      res.status(500).send(error);
-    }
-  });
+  try {
+    const abouts = await About.find();
+    const projects = await Project.find();
+    const sliders = await Slider.find();
+    const blogs = await Blog.find();
+    const gallerys = await Gallery.find();
+    const faqs = await Faq.find();
+    const testimonials = await Testimonial.find();
+    const aboutmes = await Aboutme.find();
+    const privacyPolicies = await PrivacyPolicy.find(); // Fetch privacy policies
 
-  
+    res.status(200).send({
+      about: abouts[0],
+      projects: projects,
+      slider: sliders,
+      blog: blogs,
+      gallery: gallerys,
+      faq: faqs,
+      testimonial: testimonials,
+      aboutme: aboutmes[0],
+      privacyPolicies: privacyPolicies // Include privacy policies in the response
+    });
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+// Update Privacy Policy
+router.post("/update-privacy-policy", async (req, res) => {
+  try {
+    const privacyPolicy = await PrivacyPolicy.findOneAndUpdate(
+      { _id: req.body._id },
+      req.body,
+      { new: true } // Return the updated document
+    );
+
+    if (!privacyPolicy) {
+      return res.status(404).send({ success: false, message: "Privacy Policy not found" });
+    }
+
+    res.status(200).send({
+      data: privacyPolicy,
+      success: true,
+      message: "Privacy Policy updated successfully",
+    });
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
 
 
   //update about

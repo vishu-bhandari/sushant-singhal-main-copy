@@ -15,6 +15,7 @@ import {
 } from "@heroicons/react/20/solid";
 
 const products = [
+  
   {
     name: "Empower You",
     description: "One to One Coaching Programme",
@@ -33,6 +34,13 @@ const products = [
     href: "/service",
     icon: FingerPrintIcon,
   },
+  {
+    name: "Services",
+    description: "Navigate To The Service Page",
+    href: "/service",
+    icon: FingerPrintIcon,
+  },
+  
 ];
 const callsToAction = [
   {

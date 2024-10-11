@@ -11,6 +11,7 @@ import AdminFaq from "./AdminFaq";
 import AdminTestimonial from "./AdminTestimonial";
 import AdminAboutme from "./AdminAboutme";
 import AdminContact from "./AdminContact";
+import AdminPrivacy from "./AdminPrivacy";
 
 const { TabPane } = Tabs;
 
@@ -70,6 +71,9 @@ function Admin() {
             </TabPane>
             <TabPane tab="Contact" key="9">
              <AdminContact/>
+            </TabPane>
+            <TabPane tab="Privacy" key="10">
+              <AdminPrivacy />
             </TabPane>
             
           </Tabs>

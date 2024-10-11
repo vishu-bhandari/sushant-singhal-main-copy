@@ -188,20 +188,20 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="/LegalTerms"
                   className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="/LegalTerms"
                   className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   Terms &amp; Conditions
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

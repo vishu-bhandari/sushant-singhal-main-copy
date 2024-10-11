@@ -101,6 +101,7 @@ function Intro() {
                     src={image.image}
                     alt={image.title}
                     className="rounded-xl lg:w-[80%] w-full m-auto hover:cursor-pointer hover:z-10 "
+                    loading="lazy"
                   />
                   <div>
                     <p className="text-center text-xl font-semibold lg:mt-3 sm:mt-1 mt-0">{image.title}</p>

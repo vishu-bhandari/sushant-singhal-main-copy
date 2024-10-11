@@ -84,6 +84,9 @@ function Products() {
                   src={feature.image}
                   alt={feature.name}
                   className="rounded-lg bg-gray-100"
+                  loading="lazy"
+
+                  
                 />
               ))}
             </div>
