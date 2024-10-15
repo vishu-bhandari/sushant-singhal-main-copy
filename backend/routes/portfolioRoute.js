@@ -9,7 +9,8 @@ const {
   Testimonial, 
   Aboutme, 
   Contact, 
-  PrivacyPolicy // Import the PrivacyPolicy model
+  PrivacyPolicy, // Import the PrivacyPolicy model
+
 } = require("../models/portfolioModel");
 const { User } = require("../models/userModel");
 
@@ -25,6 +26,7 @@ router.get("/get-portfolio-data", async (req, res) => {
     const testimonials = await Testimonial.find();
     const aboutmes = await Aboutme.find();
     const privacyPolicies = await PrivacyPolicy.find(); // Fetch privacy policies
+   
 
     res.status(200).send({
       about: abouts[0],
@@ -35,7 +37,8 @@ router.get("/get-portfolio-data", async (req, res) => {
       faq: faqs,
       testimonial: testimonials,
       aboutme: aboutmes[0],
-      privacyPolicies: privacyPolicies // Include privacy policies in the response
+      privacyPolicies: privacyPolicies, // Include privacy policies in the response
+     
     });
   } catch (error) {
     res.status(500).send(error);
@@ -64,6 +67,9 @@ router.post("/update-privacy-policy", async (req, res) => {
     res.status(500).send(error);
   }
 });
+
+
+
 
 
 

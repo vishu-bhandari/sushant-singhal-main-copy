@@ -209,7 +209,8 @@ const privacyPolicySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-}, { timestamps: true }); // Optional timestamps for tracking
+}, { timestamps: true }); 
+
 
 module.exports = {
   About: mongoose.model("abouts", aboutSchema),
@@ -222,4 +223,6 @@ module.exports = {
   Testimonial: mongoose.model("testimonials", testimonialSchema),
   Contact: mongoose.model('Contacts', ContactSchema),
   PrivacyPolicy: mongoose.model("PrivacyPolicies", privacyPolicySchema), // New Privacy Policy model
+ 
 };
+

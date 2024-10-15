@@ -20,6 +20,10 @@ function AdminPrivacy() {
   const [showAddEditModel, setShowAddEditModel] = React.useState(false);
   const [selectedItemForEdit, setSelectedItemForEdit] = React.useState(null);
 
+  // Split the privacyPolicies into two sections
+  const privacyPolicyItems = privacyPolicies.slice(0, 6); // First 6 items for Privacy Policies
+  const termsOfUseItems = privacyPolicies.slice(6); // Remaining items for Terms of Use
+
   const onFinish = async (values) => {
     try {
       dispatch(ShowLoading());
@@ -45,19 +49,14 @@ function AdminPrivacy() {
   return (
     <div className="container mx-auto px-4 ">
       <div className="flex justify-end">
-        <button
-          className="bg-primary px-5 py-2 text-white"
-          onClick={() => {
-            setSelectedItemForEdit(privacyPolicies[0]); // Edit the first privacy policy
-            setShowAddEditModel(true);
-          }}
-        >
-          Edit Privacy Policy
-        </button>
+        {/* Optionally add a button to add new policy */}
       </div>
+      
+      {/* Privacy Policies Section */}
+      <h2 className="text-2xl font-bold my-5">Privacy Policies</h2>
       <div className="grid grid-cols-1 gap-5 mt-5">
-        {Array.isArray(privacyPolicies) && privacyPolicies.length > 0 ? (
-          privacyPolicies.map((policy) => (
+        {Array.isArray(privacyPolicyItems) && privacyPolicyItems.length > 0 ? (
+          privacyPolicyItems.map((policy) => (
             <div key={policy._id} className="shadow border p-5 border-gray-300 rounded-lg">
               <h1 className="text-primary text-xl font-bold">{policy.subheading}</h1>
               <hr className="my-2" />
@@ -80,10 +79,37 @@ function AdminPrivacy() {
         )}
       </div>
 
+      {/* Terms of Use Section */}
+      <h2 className="text-2xl font-bold my-5">Terms of Use</h2>
+      <div className="grid grid-cols-1 gap-5 mt-5">
+        {Array.isArray(termsOfUseItems) && termsOfUseItems.length > 0 ? (
+          termsOfUseItems.map((term) => (
+            <div key={term._id} className="shadow border p-5 border-gray-300 rounded-lg">
+              <h1 className="text-primary text-xl font-bold">{term.subheading}</h1>
+              <hr className="my-2" />
+              <p className="text-sm text-gray-700">{term.text}</p>
+              <div className="flex justify-end mt-4">
+                <button
+                  className="bg-primary text-white px-4 py-2"
+                  onClick={() => {
+                    setSelectedItemForEdit(term);
+                    setShowAddEditModel(true);
+                  }}
+                >
+                  Edit
+                </button>
+              </div>
+            </div>
+          ))
+        ) : (
+          <div>No terms of use available.</div> // Handle the case where termsOfUseItems is empty
+        )}
+      </div>
+
       {selectedItemForEdit && (
         <Modal
           visible={showAddEditModel}
-          title="Edit Privacy Policy"
+          title="Edit Policy/Term"
           footer={null}
           onCancel={() => {
             setShowAddEditModel(false);
@@ -95,14 +121,28 @@ function AdminPrivacy() {
             onFinish={onFinish}
             initialValues={selectedItemForEdit}
           >
-            <Form.Item name="subheading" label="Subheading">
+            <Form.Item name="subheading" label="Subheading" hidden={!!selectedItemForEdit.title}>
               <input
                 type="text"
                 className="w-full px-3 py-2 border rounded"
                 placeholder="Subheading"
               />
             </Form.Item>
-            <Form.Item name="text" label="Content">
+            <Form.Item name="title" label="Title" hidden={!selectedItemForEdit.title}>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border rounded"
+                placeholder="Title"
+              />
+            </Form.Item>
+            <Form.Item name="text" label="Content" hidden={!!selectedItemForEdit.title}>
+              <TextArea
+                className="w-full px-3 py-2 border rounded"
+                placeholder="Content"
+                rows={4}
+              />
+            </Form.Item>
+            <Form.Item name="content" label="Content" hidden={!selectedItemForEdit.title}>
               <TextArea
                 className="w-full px-3 py-2 border rounded"
                 placeholder="Content"
