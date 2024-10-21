@@ -30,9 +30,9 @@ export default function LegalTerms() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center lg:max-w-7xl">
           <div className="bg-white w-full">
             <img 
-              src="https://i.postimg.cc/pLtTRNvT/privacy-policy-personal-data-protection-business-concept-vector.jpg" 
+              src="https://i.postimg.cc/MKKSgvhT/terms-and-conditions.jpg" 
               alt="Privacy Policy" 
-              className="w-full h-64 lg:h-96 object-contain" 
+              className="w-full h-64 lg:h-96 object-contain rounded-md " 
               loading="lazy" 
             />
           </div>
