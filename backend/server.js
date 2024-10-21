@@ -38,6 +38,32 @@ app.get("/", (req, res) => {
 });
 
 // Route to create an order
+// app.post("/order", async (req, res) => {
+//   try {
+//     const razorpay = new Razorpay({
+//       key_id: process.env.RAZORPAY_KEY_ID,
+//       key_secret: process.env.RAZORPAY_KEY_SECRET,
+//     });
+
+//     if (!req.body) {
+//       return res.status(400).send("Bad Request: No request body found");
+//     }
+
+//     const options = req.body;
+//     const order = await razorpay.orders.create(options);
+
+//     if (!order) {
+//       return res.status(400).send("Bad Request: Order creation failed");
+//     }
+
+//     res.json(order);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send("Internal Server Error");
+//   }
+// });
+
+
 app.post("/order", async (req, res) => {
   try {
     const razorpay = new Razorpay({
@@ -49,7 +75,14 @@ app.post("/order", async (req, res) => {
       return res.status(400).send("Bad Request: No request body found");
     }
 
-    const options = req.body;
+    const options = {
+      amount: req.body.amount,
+      currency: req.body.currency,
+      receipt: req.body.receipt,
+      name:req.body.name,
+      email: req.body.email,
+     
+    };
     const order = await razorpay.orders.create(options);
 
     if (!order) {

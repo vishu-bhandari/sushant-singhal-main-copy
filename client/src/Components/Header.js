@@ -19,19 +19,19 @@ const products = [
   {
     name: "Empower You",
     description: "One to One Coaching Programme",
-    href: "/service",
+    href: "/EmpowerYou",
     icon: CursorArrowRaysIcon,
   },
   {
     name: "Confident Orators",
     description: "Excel your oration with our group coaching",
-    href: "/service",
+    href: "/confident-orators",
     icon: ChartPieIcon,
   },
   {
     name: "Eloquence pe charcha",
     description: "Join our Community of Eloquent Speakers",
-    href: "/service",
+    href: "/Eloquence",
     icon: FingerPrintIcon,
   },
   {
@@ -171,7 +171,7 @@ export default function Header() {
                       </div>
                       <div className="flex-auto">
                         <NavLink
-                          to='/service'
+                          to={item.href}
                           className="block font-semibold text-gray-900"
                         >
                           {item.name}
