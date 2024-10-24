@@ -93,7 +93,7 @@ function Footer() {
             </div>
             <div className="space-y-2 text-sm">
               <p className="text-base font-bold tracking-wide text-gray-900">
-                Contacts
+                Contact Us
               </p>
               <div className="flex">
                 <p className="mr-1 text-gray-800">Phone:</p>
@@ -127,6 +127,15 @@ function Footer() {
                 >
                   sushant.publicspeaker@gmail.com
                 </a>
+              </div>
+              <div className="flex">
+                <p className="mr-1 text-gray-800">Address:</p>
+                <p
+                 
+                  className="  transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800 "
+                >
+                  30,Pocket 27, Sector 24,Rohini , Delhi -110085
+                </p>
               </div>
               <div className=" ">
                 <p className="mr-1 text-gray-800 font-bold">Quick Links</p>
