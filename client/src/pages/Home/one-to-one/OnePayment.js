@@ -4,7 +4,7 @@ const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
 
 const paymentHandler = async (amount, name, email) => {
   const currency = "INR";
-  const receiptId = '1234567890';
+  const receiptId = Math.floor(Math.random() * 1000000000).toString();
   
   
   try {
